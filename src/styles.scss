@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+   
+        background-image: url("/assets/img/utensilios-cocina.jpg")  !important; 
+        background-size: cover;
+        // background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+        
+}
