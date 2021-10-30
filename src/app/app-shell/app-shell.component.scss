@@ -1,25 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.navbar {
-	background: #5161ce;
-	float: left;
-	overflow: hidden;
-	position: relative;
-	padding: 10px 0px;
-  width: 100%;
-}
-
+// .navbar {
+// 	background: #5161ce;
+// 	float: left;
+// 	overflow: hidden;
+// 	position: absolute !important;
+// 	padding: 10px 0px;
+//   	width: 100px !important;
+  
+  
+// }
+ 
 	.menu-bar {
-		border-radius: 25px;
-		height: fit-content;
+		// border-radius: 35px;
+		height: 35px;
 		display: inline-flex;
 		background-color: rgba(0, 0, 0, .4);
-		-webkit-backdrop-filter: blur(10px);
-	  backdrop-filter: blur(10px);  
+		-webkit-backdrop-filter: blur(3px);
+	  	backdrop-filter: blur(3px);  
 		align-items: center;
 		padding: 0 10px;
-		margin: 50px 0 0 0;
+		// margin: 50px 0 0 0;
+		
+
+		// position: fixed;
+		// top: 0px;
+		// left: 0;
+		z-index: 100;
+		// width: 100% !important;
 		li {
+			font-size: 15px;
 			list-style: none;
 			color: white;
 			font-family: sans-serif;
@@ -44,7 +54,7 @@
 					&::before {
 						background: linear-gradient(to bottom, #e8edec, #d2d1d3);
 							box-shadow: 0px 3px 20px 0px black;
-							transform: scale(1.2);
+							transform: scale(.75);
 					}
 					color: black;
 			}

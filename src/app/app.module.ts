@@ -10,11 +10,18 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { HomeCarouselComponent } from './home-carousel/home-carousel.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppShellComponent
+    AppShellComponent,
+    HomeComponent,
+    HomeCarouselComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -24,7 +31,10 @@ import {MatInputModule} from '@angular/material/input';
     MatSliderModule,
     MatToolbarModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    NgbModule,
+    FlexLayoutModule,
+    NgImageSliderModule,
     
   ],
   providers: [],

@@ -7,12 +7,17 @@ body {
    
         background-image: url("/assets/img/recipe_background.jpg")  !important; 
         background-size: cover;
+        background-attachment: fixed;
         // background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
             height: 100%;
             margin: 0;
-            display: flex;
+            // display: flex;
             justify-content: center;
             background-position: center;
             background-repeat: no-repeat;
         
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
