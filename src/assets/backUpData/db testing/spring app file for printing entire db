@@ -1,0 +1,96 @@
+package com.portfolio.recipe;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.portfolio.recipe.entity.Ingredient;
+import com.portfolio.recipe.entity.IngredientLike;
+import com.portfolio.recipe.entity.Recipe;
+import com.portfolio.recipe.entity.RecipeIngredient;
+import com.portfolio.recipe.entity.RecipeTag;
+import com.portfolio.recipe.entity.SavedRecipe;
+import com.portfolio.recipe.entity.Tag;
+import com.portfolio.recipe.entity.TagLike;
+import com.portfolio.recipe.entity.User;
+import com.portfolio.recipe.repo.IngredientLikeRepo;
+import com.portfolio.recipe.repo.IngredientRepo;
+import com.portfolio.recipe.repo.RecipeIngredientRepo;
+import com.portfolio.recipe.repo.RecipeRepo;
+import com.portfolio.recipe.repo.RecipeTagRepo;
+import com.portfolio.recipe.repo.SavedRecipeRepo;
+import com.portfolio.recipe.repo.TagLikeRepo;
+import com.portfolio.recipe.repo.TagRepo;
+import com.portfolio.recipe.repo.UserRepo;
+
+@SpringBootApplication
+public class RecipeApplication implements CommandLineRunner{
+
+	@Autowired
+	RecipeRepo recipe;
+	@Autowired
+	IngredientLikeRepo ingrlike;
+	@Autowired
+	IngredientRepo ingredient;
+	@Autowired
+	RecipeIngredientRepo recingr;
+	@Autowired
+	RecipeTagRepo recipeTag;
+	@Autowired
+	SavedRecipeRepo savedRecipe;
+	@Autowired
+	TagLikeRepo tagLike;
+	@Autowired
+	TagRepo tag;
+	@Autowired
+	UserRepo user;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(RecipeApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		List<Recipe> recipeList = recipe.findAll();
+		List<IngredientLike> ingrLikeList = ingrlike.findAll();
+		List<Ingredient> ingrList = ingredient.findAll();
+		List<RecipeIngredient> recipeIngrList = recingr.findAll();
+		List<RecipeTag> recipeTagList = recipeTag.findAll();
+		List<SavedRecipe> savedRecipeList = savedRecipe.findAll();
+		List<TagLike> tagLikeList = tagLike.findAll();
+		List<Tag> tagList = tag.findAll();
+		List<User> userList = user.findAll();
+		
+		for(Recipe recipe: recipeList) {
+			System.out.println(recipe);
+		}
+		for(IngredientLike like:ingrLikeList) {
+			System.out.println(like);
+		}
+		for(Ingredient ingr: ingrList) {
+			System.out.println(ingr);
+		}
+		for(RecipeIngredient recIngr:recipeIngrList) {
+			System.out.println(recIngr);
+		}
+		for(RecipeTag tag:recipeTagList) {
+			System.out.println(tag);
+		}
+		for(SavedRecipe recipe:savedRecipeList) {
+			System.out.println(recipe);
+		}
+		for(TagLike like:tagLikeList) {
+			System.out.println(like);
+		}
+		for(Tag tag:tagList) {
+			System.out.println(tag);
+		}
+		for(User user:userList) {
+			System.out.println(user);
+		}
+	}
+
+}
