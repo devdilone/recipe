@@ -15,13 +15,18 @@ import { HomeComponent } from './home/home.component';
 import { HomeCarouselComponent } from './home-carousel/home-carousel.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { UtilComponent } from './util/util.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TileRecipeComponent } from './tile-recipe/tile-recipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppShellComponent,
     HomeComponent,
-    HomeCarouselComponent
+    HomeCarouselComponent,
+    UtilComponent,
+    TileRecipeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -32,9 +37,13 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
+    MatButtonModule,
     NgbModule,
     FlexLayoutModule,
     NgImageSliderModule,
+    RouterModule,
+    HttpClientModule,
+    
     
   ],
   providers: [],
